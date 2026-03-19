@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume AI Analyzer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume AI Analyzer</h1>
+
+        <!-- Drag & Drop Area -->
+        <div id="drop-area">
+            <p>Drag & drop your resume PDF here</p>
+            <input type="file" id="file-input" accept=".pdf">
+        </div>
+
+        <!-- Job description -->
+        <textarea id="job-desc" placeholder="Paste job description here..."></textarea>
+
+        <!-- Analyze Button -->
+        <button id="analyze-btn">Analyze</button>
+
+        <!-- Results -->
+        <div id="results" class="hidden">
+            <h2>Results</h2>
+            <div class="score-bar">
+                <div id="score-fill"></div>
+            </div>
+            <p>Match Score: <span id="match-score"></span>%</p>
+            <div>
+                <p>Matched Skills:</p>
+                <ul id="matched-skills"></ul>
+            </div>
+            <div>
+                <p>Missing Skills:</p>
+                <ul id="missing-skills"></ul>
+            </div>
+
+            <!-- Download PDF -->
+            <button id="download-btn" class="hidden">Download PDF</button>
+        </div>
+    </div>
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
